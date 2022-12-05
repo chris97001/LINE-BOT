@@ -14,7 +14,7 @@
 
 give conditions while using the search, pick, guess features
 
-<img src="./img/enter condition.jpg" width=300>
+<img src="./img/Enter condition.jpg" width=300>
 
 ### Search song 
 
