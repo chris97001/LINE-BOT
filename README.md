@@ -50,6 +50,26 @@ A little game of guessing song
 
 <img src="./img/Guess game.jpg" width=300>
 
+* Some process on string matching
+
+    Use difflib.SequenceMatcher to get ratio of matched string, above 0.9 is acceptable
+    
+```cpp=171
+    def checkAnswer(text):
+    text = re.sub(r'Version|Ver|ver|Live|[\(\)\ \']', '', text)
+    ans = re.sub(r'Version|Ver|ver|Live|[\(\)\ \']', '', stateGuessSong_songName)
+    text = text.lower()
+    ans = ans.lower()
+    seq = difflib.SequenceMatcher(None, text, ans)
+    ratio = seq.ratio()
+    seq = seq.find_longest_match(0, len(text), 0, len(ans))
+    isAnswer = ratio>=0.9 or (ratio>=0.65 and seq.size == len(text) and seq.b == 0)
+    if isAnswer:
+        return True
+    else:
+        return False
+```
+
 ## Reference
 
 [Spotipy](https://spotipy.readthedocs.io/en/2.21.0/#)

@@ -175,7 +175,7 @@ def checkAnswer(text):
     seq = difflib.SequenceMatcher(None, text, ans)
     ratio = seq.ratio()
     seq = seq.find_longest_match(0, len(text), 0, len(ans))
-    isAnswer = ratio>=0.8 or (ratio>=0.65 and seq.size == len(text) and seq.b == 0)
+    isAnswer = ratio>=0.9 or (ratio>=0.65 and seq.size == len(text) and seq.b == 0)
     if isAnswer:
         return True
     else:
