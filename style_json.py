@@ -137,12 +137,12 @@ def createSearchMenu():
             "contents": [
                 {
                 "type": "bubble",
-                "hero": {
-                    "type": "image",
-                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
-                    "size": "full",
-                    "aspectRatio": "20:13"
-                },
+                # "hero": {
+                #     "type": "image",
+                #     "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+                #     "size": "full",
+                #     "aspectRatio": "20:13"
+                # },
                 "body": {
                     "type": "box",
                     "layout": "vertical",
@@ -300,12 +300,12 @@ def createSearchMenu():
                 },
                 {
                 "type": "bubble",
-                "hero": {
-                    "type": "image",
-                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
-                    "size": "full",
-                    "aspectRatio": "20:13"
-                },
+                # "hero": {
+                #     "type": "image",
+                #     "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+                #     "size": "full",
+                #     "aspectRatio": "20:13"
+                # },
                 "body": {
                     "type": "box",
                     "layout": "vertical",
@@ -432,12 +432,12 @@ def createSearchFinishedMenu():
         contents=
         {
             "type": "bubble",
-            "hero": {
-                "type": "image",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
-                "size": "full",
-                "aspectRatio": "20:13"
-            },
+            # "hero": {
+            #     "type": "image",
+            #     "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+            #     "size": "full",
+            #     "aspectRatio": "20:13"
+            # },
             "body": {
                 "type": "box",
                 "layout": "vertical",
@@ -493,12 +493,12 @@ def createMainMenu():
         contents=
         {
             "type": "bubble",
-            "hero": {
-                "type": "image",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
-                "size": "full",
-                "aspectRatio": "20:13"
-            },
+            # "hero": {
+            #     "type": "image",
+            #     "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+            #     "size": "full",
+            #     "aspectRatio": "20:13"
+            # },
             "body": {
                 "type": "box",
                 "layout": "vertical",
@@ -558,12 +558,12 @@ def createRandomMenu():
         "contents": [
             {
             "type": "bubble",
-            "hero": {
-                "type": "image",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
-                "size": "full",
-                "aspectRatio": "20:13"
-            },
+            # "hero": {
+            #     "type": "image",
+            #     "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+            #     "size": "full",
+            #     "aspectRatio": "20:13"
+            # },
             "body": {
                 "type": "box",
                 "layout": "vertical",
@@ -750,12 +750,12 @@ def createRandomMenu():
             },
             {
             "type": "bubble",
-            "hero": {
-                "type": "image",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
-                "size": "full",
-                "aspectRatio": "20:13"
-            },
+            # "hero": {
+            #     "type": "image",
+            #     "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+            #     "size": "full",
+            #     "aspectRatio": "20:13"
+            # },
             "body": {
                 "type": "box",
                 "layout": "vertical",

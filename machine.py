@@ -85,12 +85,6 @@ def create_machine():
             {
                 "trigger": "advance",
                 "source": "stateSearch",
-                "dest": "stateEnterSearchLimit",
-                "conditions": "is_going_to_stateEnterSearchLimit",
-            },
-            {
-                "trigger": "advance",
-                "source": "stateSearch",
                 "dest": "stateSearchCall",
                 "conditions": "is_going_to_stateSearchCall",
             },
@@ -164,6 +158,12 @@ def create_machine():
                 "source": "stateRandom",
                 "dest": "stateGuessSong",
                 "conditions": "is_going_to_stateGuessSong",
+            },
+            {
+                "trigger": "advance",
+                "source": "stateRandom",
+                "dest": "stateRandom",
+                "conditions": "is_going_to_stateGuessSong_ERROR",
             },
             {
                 "trigger": "advance",

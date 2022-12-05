@@ -13,9 +13,9 @@ class TocMachine(GraphMachine):
             'Album'     : "",
             'Artist'    : "",
             'Year'      : "",
-            'Genre'    : "",
+            'Genre'     : "",
         }
-        self.searchLimit = 5
+        self.searchLimit = 10
         self.score = 0
         self.maxScore = 0
         
@@ -320,6 +320,14 @@ class TocMachine(GraphMachine):
         if send_searchedResults_message("", self.query, 1, 3) == "ERROR":
             flag = False
         return text == "猜歌" and flag
+    
+    def is_going_to_stateGuessSong_ERROR(self, event):
+        if send_searchedResults_message("", self.query, 1, 3) == "ERROR":
+            user_id = event.source.user_id
+            push_text_message(user_id, "沒有找到相關結果，請更改條件再試一次")
+            return True
+        return False
+        
     
     def on_enter_stateGuessSong(self, event):
         reply_token = event.reply_token

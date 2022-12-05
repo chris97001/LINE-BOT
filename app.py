@@ -62,7 +62,6 @@ def webhook_handler():
     signature = request.headers["X-Line-Signature"]
     # get request body as text
     body = request.get_data(as_text=True)
-    # app.logger.info(f"Request body: {body}")
 
     # parse webhook body
     try:
@@ -78,9 +77,6 @@ def webhook_handler():
             continue
         if not isinstance(event.message.text, str):
             continue
-        # line_bot_api.push_message(event.source.user_id, TextSendMessage(text='安安您好！早餐吃了嗎？'))
-        # print(f"\nFSM STATE: {machine.state}")
-        # print(f"REQUEST BODY: \n{body}")
 
         # Create machine for new user
         user_id = event.source.user_id
@@ -103,4 +99,4 @@ def show_fsm():
 
 if __name__ == "__main__":
     port = os.environ.get("PORT", 8000)
-    app.run(host="0.0.0.0", port=port, debug=True)
+    app.run(host="0.0.0.0", port=port, debug=False)

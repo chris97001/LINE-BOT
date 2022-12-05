@@ -102,22 +102,28 @@ def send_searchedResults_message(id, query, limit, searchType = 0):
 
     results = {}
     
-    results = sp.search(q,limit)
+    results = sp.search(q,limit, market='TW')
 
     if len(results['tracks']['items']) == 0:
-        line_bot_api.reply_message(id, TextSendMessage(text='沒有找到相關結果，請更改條件再試一次'))
+        if searchType != 3:
+            line_bot_api.reply_message(id, TextSendMessage(text='沒有找到相關結果，請更改條件再試一次'))
         return "ERROR"
 
     results_size = int(results['tracks']['total'])
 
     # Random
     if searchType == 1:
-        results = sp.search(q, limit=1, offset=random.randrange(min(1000, results_size)))
+        results = sp.search(q, limit=1, offset=random.randrange(min(1000, results_size)), market='TW')
     # Song-guessing game
     if searchType == 2:
         rand = random.randrange(min(300, results_size))
-        results = sp.search(q, limit=1, offset=rand)
-        stateGuessSong_songName = results['tracks']['items'][0]['name']
+        results = sp.search(q, limit=1, offset=rand, market='TW')
+        stateGuessSong_songName = results['tracks']['items'][0]['name'].strip('\ ')
+        while re.search('\(live\)|\ live$', stateGuessSong_songName.lower()) != None:
+            rand = random.randrange(min(300, results_size))
+            results = sp.search(q, limit=1, offset=rand, market='TW')
+            stateGuessSong_songName = results['tracks']['items'][0]['name'].strip('\ ')
+
         previewUrls = [results['tracks']['items'][0]['preview_url']]
         print(rand,results['tracks']['items'][0]['artists'][0]['name'],stateGuessSong_songName)
         sendPreviewMessage(id, 0)

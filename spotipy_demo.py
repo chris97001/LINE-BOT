@@ -22,23 +22,23 @@ sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_
 # print(text)
 
 
-# results = sp.search(q='genre:k-pop-girl-group',limit=1,offset=999)
+# results = sp.search(q='BLACKPINK',limit=10,offset=0,market='TW')
 # print(results['tracks']['total'])
 # print([d['name'] for d in results['tracks']['items']])
 
-s1 = "lifes too short".lower()
-s2 = "Life's too short(English Version)".lower()
+# s1 = "lifes too short".lower()
+# s2 = "Life's too short(English Version)".lower()
 
-s1 = re.sub(r'Version|Ver|ver|Live|[\(\)\ \']', '', s1)
-s2 = re.sub(r'Version|Ver|ver|Live|[\(\)\ \']', '', s2)
+# s1 = re.sub(r'Version|Ver|ver|Live|[\(\)\ \']', '', s1)
+# s2 = re.sub(r'Version|Ver|ver|Live|[\(\)\ \']', '', s2)
 
-seq = difflib.SequenceMatcher(None, s1, s2)
-ratio = seq.ratio()
-seq = seq.find_longest_match(0,len(s1),0,len(s2))
-isAnswer = ratio>=0.8 or (ratio>=0.7 and seq.size == len(s1) and seq.b == 0)
-print(ratio, seq)
-print(seq.size)
-print(isAnswer)
+s1 = '山'
+s2 = '⼭'
+print(ord(s1), ord(s2))
+
+# s1 = 'jijlaw(live)'
+# pat = '\(live\)|\ live$'
+# print(re.search(pat, s1))
 
 '''
 results:
