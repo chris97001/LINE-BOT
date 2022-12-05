@@ -54,6 +54,8 @@ A little game of guessing song
 
 [Spotipy](https://spotipy.readthedocs.io/en/2.21.0/#)
 
+[Flex Message Simulator](https://developers.line.biz/flex-simulator/)
+
 
 
 
