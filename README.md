@@ -54,7 +54,7 @@ A little game of guessing song
 
     Use difflib.SequenceMatcher to get ratio of matched string, above 0.9 is acceptable
     
-```python = 170
+```python
 def checkAnswer(text):
     text = re.sub(r'Version|Ver|ver|Live|[\(\)\ \']', '', text)
     ans = re.sub(r'Version|Ver|ver|Live|[\(\)\ \']', '', stateGuessSong_songName)
