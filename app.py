@@ -90,11 +90,11 @@ def webhook_handler():
     return "OK"
 
 
-@app.route("/show-fsm", methods=["GET"])
-def show_fsm():
-    fsm = create_machine()
-    fsm.get_graph().draw("fsm.png", prog="dot", format="png")
-    return send_file("./fsm.png", mimetype="image/png")
+# @app.route("/show-fsm", methods=["GET"])
+# def show_fsm():
+#     fsm = create_machine()
+#     fsm.get_graph().draw("fsm.png", prog="dot", format="png")
+#     return send_file("./fsm.png", mimetype="image/png")
 
 
 if __name__ == "__main__":
